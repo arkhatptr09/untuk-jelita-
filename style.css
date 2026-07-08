@@ -1,0 +1,224 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eaf6ff;
+    color:#333;
+}
+
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        180deg,
+        #b8e3ff,
+        #eaf6ff
+    );
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#4a90e2;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#hugBtn{
+    background:#67b7ff;
+    color:white;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:1rem;
+}
+
+#hugBtn:hover{
+    transform:scale(1.05);
+}
+
+.game-section{
+    background:white;
+}
+
+.game-section h2{
+    color:#4a90e2;
+    margin-bottom:15px;
+}
+
+.game-section h3{
+    margin:20px 0;
+}
+
+#gameArea{
+    width:100%;
+    max-width:900px;
+    height:400px;
+    margin:auto;
+    background:#f4fbff;
+    border-radius:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.heart{
+    position:absolute;
+    font-size:40px;
+    cursor:pointer;
+    user-select:none;
+    animation:pop .2s ease;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform:scale(1);
+    }
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#4a90e2;
+    margin-bottom:10px;
+}
+
+.motivation{
+    background:#dff1ff;
+}
+
+.motivation h2{
+    margin-bottom:20px;
+    color:#4a90e2;
+}
+
+#motivationBtn{
+    background:#67b7ff;
+    color:white;
+    padding:15px 28px;
+    border-radius:25px;
+}
+
+#motivationText{
+    margin-top:25px;
+    font-size:1.2rem;
+    color:#4a90e2;
+    font-weight:600;
+}
+
+.forgive-section{
+    background:white;
+}
+
+#forgiveBtn{
+    background:#4a90e2;
+    color:white;
+    padding:18px 45px;
+    border-radius:40px;
+    font-size:1.2rem;
+}
+
+#forgiveBtn:hover{
+    transform:scale(1.08);
+}
+
+.footer-message{
+    background:#b8e3ff;
+}
+
+.footer-message h2{
+    margin-bottom:20px;
+    color:#2e6db5;
+}
+
+.footer-message p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.confetti{
+    position:fixed;
+    top:-10px;
+    z-index:99999;
+    animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(120vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+.typing-section{
+    padding:80px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.typing-box{
+    max-width:700px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    font-size:1.2rem;
+    line-height:1.8;
+    text-align:center;
+}
+
+#typingText::after{
+    content:"|";
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
